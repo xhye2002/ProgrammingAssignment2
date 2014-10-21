@@ -5,25 +5,25 @@
 ## makeCacheMatrix creates a special "matrix": 
 ## return a list of functions containing:
 ## 1. function to set the matrix;
-## 2. function get the matrix; 
+## 2. function to get the matrix; 
 ## 3. function to set the inverse;
 ## 4. function to get the inverse
 
 makeCacheMatrix <- function(x = matrix()) {
         inv <- NULL
         
-        # set matrix
+        ## set matrix
         set <- function(y) {
                 x <<- y
                 inv<- NULL
         }
-        # get matrix
+        ## get matrix
         get <- function() x
         
-        #set inverse
+        ## set inverse
         setInverse <- function(inverse) inv <<- inverse
         
-        #get inverse
+        ## get inverse
         getInverse <- function() inv
         
         list(set = set, get = get,
